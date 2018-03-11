@@ -37,3 +37,7 @@ git remote rm origin
 git remote rename new-origin origin
 ```
 
+## remove local branches no longer on remote
+```bash
+git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
+```
