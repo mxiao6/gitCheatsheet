@@ -46,3 +46,8 @@ git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}
 ```bash
 .git/info/exclude
 ```
+
+## Remove a folder from git tracking
+```bash
+git rm -r --cached path_to_your_folder/
+```
