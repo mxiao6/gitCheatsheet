@@ -51,3 +51,8 @@ git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}
 ```bash
 git rm -r --cached path_to_your_folder/
 ```
+
+## Update cached credential on macOS
+```bash
+git config --global credential.helper osxkeychain
+```
