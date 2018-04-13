@@ -56,3 +56,8 @@ git rm -r --cached path_to_your_folder/
 ```bash
 git config --global credential.helper osxkeychain
 ```
+
+## Rewriting the most recent commit message
+```bash
+git commit --amend
+```
