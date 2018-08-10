@@ -47,17 +47,24 @@ git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}
 .git/info/exclude
 ```
 
-## Remove a folder from git tracking
+## remove a folder from git tracking
 ```bash
 git rm -r --cached path_to_your_folder/
 ```
 
-## Update cached credential on macOS
+## update cached credential on macOS
 ```bash
 git config --global credential.helper osxkeychain
 ```
 
-## Rewriting the most recent commit message
+## rewrite the most recent commit message
 ```bash
 git commit --amend
+```
+
+## push a local Git branch to master branch in the remote
+```bash
+git push origin develop:master
+
+git push <remote> <local branch name>:<remote branch to push into>
 ```
