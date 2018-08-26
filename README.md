@@ -27,7 +27,7 @@ pick   b76d157 b
 squash a931ac7 c
 ```
 
-## moving git repository
+## move git repository
 ```bash
 git fetch origin
 git remote add new-origin git@github.com:user/repo.git
@@ -67,4 +67,9 @@ git commit --amend
 git push origin develop:master
 
 git push <remote> <local branch name>:<remote branch to push into>
+```
+
+## show file differences between staging and the last file version
+```bash
+git diff --staged
 ```
