@@ -1,18 +1,22 @@
 # git cheatsheet
+
 Common commands. Easy for future use.
 
 ## reset one file
+
 ```bash
 git checkout HEAD -- my-file.txt
 ```
 
 ## reset to remote
+
 ```bash
 git fetch origin
 git reset --hard origin/master
 ```
 
 ## merge two commits into one
+
 ```bash
 git log --pretty=oneline
 a931ac7c808e2471b22b5bd20f0cad046b1c5d0d c
@@ -28,6 +32,7 @@ squash a931ac7 c
 ```
 
 ## move git repository
+
 ```bash
 git fetch origin
 git remote add new-origin git@github.com:user/repo.git
@@ -38,31 +43,37 @@ git remote rename new-origin origin
 ```
 
 ## remove local branches no longer on remote
+
 ```bash
 git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
 ```
 
 ## local gitignore
+
 ```bash
 .git/info/exclude
 ```
 
 ## remove a folder from git tracking
+
 ```bash
 git rm -r --cached path_to_your_folder/
 ```
 
 ## update cached credential on macOS
+
 ```bash
 git config --global credential.helper osxkeychain
 ```
 
 ## rewrite the most recent commit message
+
 ```bash
 git commit --amend
 ```
 
 ## push a local Git branch to master branch in the remote
+
 ```bash
 git push origin develop:master
 
@@ -70,6 +81,13 @@ git push <remote> <local branch name>:<remote branch to push into>
 ```
 
 ## show file differences between staging and the last file version
+
 ```bash
 git diff --staged
+```
+
+## stash a single file
+
+```bash
+git stash push -m welcome_cart app/views/cart/welcome.thtml
 ```
