@@ -91,3 +91,10 @@ git diff --staged
 ```bash
 git stash push -m welcome_cart app/views/cart/welcome.thtml
 ```
+
+## undo git add
+
+```bash
+git reset <file>
+git reset # unstage all changes
+```
