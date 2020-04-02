@@ -98,3 +98,9 @@ git stash push -m welcome_cart app/views/cart/welcome.thtml
 git reset <file>
 git reset # unstage all changes
 ```
+
+## undo last commit
+
+```bash
+git reset --soft HEAD~1
+```
